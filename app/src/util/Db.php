@@ -11,9 +11,9 @@ class Db
     private $host = null;
     private $user = null;
     private $pass = null;
-    private $conn = null;
+    public $conn = null;
 
-    public function __construct($host = "localhost", $user = "root", $pass = "codeslab")
+    public function __construct($host = "localhost", $user = "root", $pass = "coderslab")
     {
         $this->host = $host;
         $this->user = $user;
@@ -22,7 +22,7 @@ class Db
         try{
             $this->conn = new PDO("mysql:host=$host", $user, $pass,
                 [
-                    PDO::ATTR_ERRMODE => PDO::ATTR_ERRMODE_EXCEPTION,
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                 ]);
 

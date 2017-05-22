@@ -14,7 +14,7 @@ abstract class ActiveRecord
     public function __construct()
     {
         self::connect();
-
+        $this->id = -1;
     }
     public static function connect()
     {

@@ -13,7 +13,7 @@ $user2->setEmail('user@user.pl');
 $user2->setPasswordHash('user');
 $user2->save();
 $user2 = User::loadByEmail('user@user.pl');
-//var_dump($user2);
+var_dump($user2);
 $user4 = new User();
 $user4->setUsername('user3');
 $user4->setEmail('user3@user3');
@@ -26,3 +26,8 @@ var_dump($users);
 
 $user3 = User::loadById('2');
 var_dump($user3);
+
+$user5 = User::loadById('2');
+
+$user5->setUsername('misiek');
+$user5->save();

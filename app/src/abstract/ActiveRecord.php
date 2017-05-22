@@ -19,7 +19,7 @@ abstract class ActiveRecord
     public static function connect()
     {
         if (!self::$db){
-            self::$db = new db();
+            self::$db = new Db ();
             self::$db->changeDB('shop');
 
         }

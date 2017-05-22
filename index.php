@@ -5,3 +5,4 @@
  * Date: 22.05.17
  * Time: 15:02
  */
+require_once ('autoloader.php');
